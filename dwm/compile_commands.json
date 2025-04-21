@@ -1,0 +1,68 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-std=c99",
+      "-pedantic",
+      "-Wall",
+      "-Wno-deprecated-declarations",
+      "-Os",
+      "-I/usr/X11R6/include",
+      "-I/usr/include/freetype2",
+      "-I/usr/include/yajl",
+      "-D_DEFAULT_SOURCE",
+      "-D_BSD_SOURCE",
+      "-D_XOPEN_SOURCE=700L",
+      "-DVERSION=\"6.5\"",
+      "-DXINERAMA",
+      "drw.c"
+    ],
+    "directory": "/home/kibertod/dev/dwm",
+    "file": "/home/kibertod/dev/dwm/drw.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-std=c99",
+      "-pedantic",
+      "-Wall",
+      "-Wno-deprecated-declarations",
+      "-Os",
+      "-I/usr/X11R6/include",
+      "-I/usr/include/freetype2",
+      "-I/usr/include/yajl",
+      "-D_DEFAULT_SOURCE",
+      "-D_BSD_SOURCE",
+      "-D_XOPEN_SOURCE=700L",
+      "-DVERSION=\"6.5\"",
+      "-DXINERAMA",
+      "dwm.c"
+    ],
+    "directory": "/home/kibertod/dev/dwm",
+    "file": "/home/kibertod/dev/dwm/dwm.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-std=c99",
+      "-pedantic",
+      "-Wall",
+      "-Wno-deprecated-declarations",
+      "-Os",
+      "-I/usr/X11R6/include",
+      "-I/usr/include/freetype2",
+      "-I/usr/include/yajl",
+      "-D_DEFAULT_SOURCE",
+      "-D_BSD_SOURCE",
+      "-D_XOPEN_SOURCE=700L",
+      "-DVERSION=\"6.5\"",
+      "-DXINERAMA",
+      "util.c"
+    ],
+    "directory": "/home/kibertod/dev/dwm",
+    "file": "/home/kibertod/dev/dwm/util.c"
+  }
+]

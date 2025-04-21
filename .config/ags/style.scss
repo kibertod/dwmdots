@@ -1,0 +1,497 @@
+$blue: #c5c9c5;
+$green: #c5c9c5;
+$red: #c5c9c5;
+$orange: #c5c9c5;
+$yellow: #c5c9c5;
+$purple: #c5c9c5;
+$cyan: #c5c9c5;
+$background: #000000;
+$foreground: #c5c9c5;
+$border: #484848;
+$lightened: rgba(255, 255, 255, 0.1);
+$workspace-highlight: rgba(139, 164, 176, 0.2);
+$bar-bg: rgba(24, 22, 22, 0.75);
+
+* {
+	font-family: "CommitMono, SauceCodePro Nerd Font Mono";
+}
+
+.nerd {
+	margin-left: 3px;
+	font-size: 16pt;
+}
+
+#sidebar,
+#calendar {
+	color: $foreground;
+	border-right: 1px solid $border;
+	// border-radius: 10px;
+	background-color: $background;
+}
+
+#calendar {
+	border: 1px solid $border;
+	border-top: 0;
+	border-radius: 0px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+button {
+	color: $foreground;
+}
+
+#vpn,
+#bluetooth-scan,
+#bluetooth-discoverable,
+#bluetooth-pairable {
+	margin-bottom: 20px;
+	border: 1px solid $border;
+}
+
+#vpn.active {
+	border-color: $cyan;
+	color: $cyan;
+}
+
+#bluetooth-pairable {
+	padding-right: 27px;
+}
+
+#bluetooth-scan {
+	padding-right: 22px;
+}
+
+#bluetooth-scan.active {
+	border-color: $green;
+	color: $green;
+}
+
+#bluetooth-discoverable.active {
+	border-color: $purple;
+	color: $purple;
+}
+
+#bluetooth-pairable.active {
+	border-color: $blue;
+	color: $blue;
+}
+
+#time {
+	font-size: 40pt;
+}
+
+#battery-icon {
+	color: $yellow;
+}
+#cpu-icon {
+	color: $red;
+}
+#mem-icon {
+	color: $green;
+}
+#temp {
+	color: $blue;
+}
+
+#lock {
+	border: 1px solid;
+	color: $purple;
+}
+#logout {
+	border: 1px solid;
+	color: $blue;
+}
+#reboot {
+	border: 1px solid;
+	color: $orange;
+}
+#poweroff {
+	border: 1px solid;
+	color: $red;
+}
+
+.power-saver {
+	border: 1px solid $border;
+}
+.balanced {
+	border: 1px solid $border;
+}
+.performance {
+	border: 1px solid $border;
+}
+
+.power-saver-active {
+	border: 1px solid $blue;
+	color: $blue;
+}
+.balanced-active {
+	border: 1px solid;
+	color: $orange;
+}
+.performance-active {
+	border: 1px solid;
+	color: $red;
+}
+
+.power-saver:hover {
+	border: 1px solid $blue;
+}
+.balanced:hover {
+	border: 1px solid $orange;
+}
+.performance:hover {
+	border: 1px solid $red;
+}
+
+.dropdown {
+	border: 1px solid $border;
+	border-radius: 3px;
+}
+
+.spacer {
+	color: transparent;
+}
+
+#speaker-muted,
+#microphone-muted,
+#wifi-toggle {
+	border: 1px solid;
+	color: $red;
+}
+
+#microphone-muted.active,
+#speaker-muted.active,
+#wifi-toggle.active {
+	color: $background;
+	border-color: $red;
+	background-color: $red;
+}
+
+#microphone-slider {
+	margin-bottom: 0.3em;
+}
+
+trough {
+	min-height: 6px;
+	border-radius: 3px;
+	background-color: $lightened;
+}
+
+slider {
+	all: unset;
+}
+
+levelbar {
+	transition: 0.5s ease;
+}
+
+levelbar block {
+	min-height: 6px;
+	border-radius: 3px;
+}
+
+levelbar block.filled {
+	border-radius: 3px;
+}
+
+#battery-level block.filled {
+	background-color: $yellow;
+}
+
+#cpu-level block.filled {
+	background-color: $red;
+}
+
+#mem-level block.filled {
+	background-color: $green;
+}
+
+levelbar block.empty {
+	background-color: $lightened;
+	border-radius: 3px;
+}
+
+highlight {
+	all: unset;
+	border-radius: 3px;
+	background-color: $foreground;
+}
+
+.dropdown button {
+	border-radius: 7px;
+}
+
+.wifi-networks button,
+.bluetooth-devices button {
+	border-radius: 0;
+	border: 1px solid $border;
+	border-top: 0px;
+	background-color: transparent;
+	color: $foreground;
+}
+
+.bluetooth-devices .active {
+	color: $green;
+}
+
+.wifi-networks button:first-child,
+.bluetooth-devices button:first-child {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-top: 1px solid $border;
+}
+
+.wifi-networks button:last-child,
+.bluetooth-devices button:last-child {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.wifi-active {
+	color: $cyan;
+	font-weight: bold;
+	border-color: $cyan;
+}
+
+.dropdown-items button {
+	border-radius: 3px;
+}
+
+.dropdown-items button:last-child {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.dropdown .dropdown-toggle {
+	border-radius: 3px;
+	border: 0;
+	color: $foreground;
+}
+
+.dropdown.active .dropdown-toggle {
+	border-radius: 3px 3px 0 0;
+	border-bottom: solid 1px $border;
+}
+
+button {
+	padding: 5px 20px;
+}
+
+.img {
+	min-width: 100px;
+	min-height: 100px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 3px;
+	margin-right: 1em;
+}
+
+.ava {
+	min-width: 120px;
+	min-height: 120px;
+	border-radius: 3px;
+}
+
+.greeting {
+	font-size: 12pt;
+}
+
+.player-title {
+	margin-bottom: 10px;
+	font-size: 12pt;
+}
+.player-artist {
+	opacity: 0.9;
+}
+.player-album {
+	font-size: 8pt;
+	opacity: 0.7;
+}
+.player-play {
+	background-color: transparent;
+	border-radius: 3px;
+}
+.player-prev {
+	background-color: transparent;
+	border-radius: 5px 0 0 5px;
+}
+.player-next {
+	background-color: transparent;
+	border-radius: 0 5px 5px 0;
+}
+
+#player-controls {
+	border: solid 1px $border;
+	border-radius: 3px;
+
+	button {
+		min-width: 100px;
+		padding: 0;
+	}
+}
+
+.shuffle,
+.repeat {
+	border-radius: 3px;
+	border: 1px solid $border;
+	padding: 0 18px 0 15px;
+}
+.shuffle.active {
+	border-color: $purple;
+	color: $purple;
+}
+.repeat.active {
+	border-color: $yellow;
+	color: $yellow;
+}
+
+button {
+	border-radius: 3px;
+}
+
+calendar {
+	all: unset;
+	background-color: transparent;
+	border-radius: 3px;
+	color: $foreground;
+	font-size: 11pt;
+	padding: 5px;
+
+	.header {
+		background-color: transparent;
+	}
+
+	.highlight {
+		background-color: transparent;
+		color: $orange;
+	}
+
+	:selected {
+		color: $red;
+		background-color: transparent;
+	}
+
+	:indeterminate {
+		color: $blue;
+	}
+
+	.button {
+		background-color: transparent;
+		color: $blue;
+		font-size: 13pt;
+	}
+}
+
+spinner {
+	margin: 20px;
+}
+
+// notifications
+window.notification-popups {
+	transition: 0s;
+}
+
+.icon {
+	min-width: 48px;
+	min-height: 48px;
+	margin-right: 1em;
+}
+
+.icon image {
+	font-size: 48px;
+	margin: 5px;
+	color: $foreground;
+}
+
+.icon box {
+	min-width: 48px;
+	min-height: 48px;
+	border-radius: 3px;
+}
+
+.notification {
+	min-width: 450px;
+	padding: 20px;
+	border: 1px solid $border;
+	background-color: $background;
+}
+
+.notification.critical {
+	border: 1px solid $red;
+}
+
+.title {
+	color: $foreground;
+	font-size: 12pt;
+	color: $cyan;
+}
+
+.body {
+	color: $foreground;
+	margin-top: 10px;
+}
+
+.dismiss-button {
+	color: $red;
+	border: 1px solid $red;
+	padding: 0 20px;
+	margin-bottom: 10px;
+}
+
+.actions .action-button {
+	font-size: 9pt;
+	margin: 0 10px;
+	margin-top: 10px;
+	padding: 0;
+	color: $cyan;
+	border: 1px solid $cyan;
+	border-radius: 3px;
+}
+
+.actions .action-button:first-child {
+	margin-left: 0;
+}
+
+.actions .action-button:last-child {
+	margin-right: 0;
+}
+
+.info-popup {
+	background-color: $background;
+	border: 1px solid $border;
+	border-radius: 3px;
+	padding: 20px;
+	color: $foreground;
+
+	.icon {
+		font-size: 20pt;
+	}
+	block.filled {
+		background-color: $foreground;
+	}
+}
+
+.tabs-content {
+	padding: 10px;
+	border-radius: 3px;
+	border: 1px solid $border;
+}
+
+.tabs-header {
+	background: $background;
+	color: $foreground;
+	border-radius: 3px;
+	margin: 0 10px;
+	border: solid 1px $border;
+	border-radius: 3px;
+}
+
+.tabs-header-label {
+	font-size: 10pt;
+}
+
+.tabs-header.active {
+	color: $foreground;
+	border-color: $foreground;
+}
