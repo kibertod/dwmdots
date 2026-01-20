@@ -30,11 +30,26 @@ return {
 			})
 			lspconfig.emmet_language_server.setup({})
 			lspconfig.htmx.setup({})
-			lspconfig.pyright.setup({ capabilities = capabilities })
+			lspconfig.pyright.setup({
+				capabilities = capabilities,
+				settings = {
+					python = {
+						analysis = {
+							reportOptionalMemberAccess = false,
+							reportOptionalCall = false,
+							reportOptionalSubscript = false,
+							reportOptionalOperand = false,
+						},
+					},
+				},
+			})
 			lspconfig.csharp_ls.setup({ capabilities = capabilities })
 			lspconfig.sqlls.setup({})
 			lspconfig.cssls.setup({})
 			lspconfig.clangd.setup({})
+			lspconfig.ts_ls.setup({})
+			lspconfig.racket_langserver.setup({})
+			lspconfig.hls.setup({})
 
 			local border = {
 				{ "╭", "FloatBorder" },
@@ -105,6 +120,7 @@ return {
 			cmp.setup({
 				completion = {
 					completeopt = "menu,menuone,noinsert",
+					menu = { border = "rounded" },
 				},
 				snippet = {
 					expand = function(args)
@@ -120,7 +136,7 @@ return {
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
 					{ name = "async_path" },
-					-- { name = "nvim_lsp_signature_help" },
+					{ name = "nvim_lsp_signature_help" },
 				},
 				window = {
 					completion = cmp.config.window.bordered({
@@ -130,19 +146,19 @@ return {
 					}),
 					documentation = cmp.config.window.bordered({
 						winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-						col_offset = -3,
+						col_offset = 0,
 						side_padding = 0,
 					}),
 				},
 				formatting = {
 					expandable_indicator = true,
-					fields = { "kind", "abbr", "menu" },
-					format = require("lspkind").cmp_format({
-						mode = "symbol",
-						maxwidth = 30,
-						ellipsis_char = "...",
-						show_labelDetails = true,
-					}),
+					fields = { "icon", "abbr", "menu" },
+					format = function(entry, vim_item)
+						local kind = require("lspkind").cmp_format({ mode = "symbol", maxwidth = 50 })(entry, vim_item)
+						local strings = vim.split(kind.icon, "%s", { trimempty = true })
+						kind.icon = " " .. (strings[1] or "") .. " "
+						return kind
+					end,
 				},
 			})
 		end,
@@ -185,7 +201,7 @@ return {
 					css = { "prettierd" },
 					scss = { "prettierd" },
 					json = { "biome" },
-					html = { "prettier" },
+					html = { "prettierd" },
 					toml = { "taplo" },
 				},
 				formatters = {

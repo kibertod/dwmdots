@@ -1,4 +1,4 @@
-return {
+return {{
 	"nvim-treesitter/nvim-treesitter",
 	version = false, -- last release is way too old and doesn't work on Windows
 	build = ":TSUpdate",
@@ -63,6 +63,7 @@ return {
 			"vimdoc",
 			"yaml",
 			"c_sharp",
+            "timur"
 		},
 		incremental_selection = {
 			enable = true,
@@ -110,4 +111,11 @@ return {
 		end
 		require("nvim-treesitter.configs").setup(opts)
 	end,
+},
+    {
+	"kibertod/nvim-treesitter-timur",
+	config = function()
+		require("nvim-treesitter-timur").setup({})
+	end,
+},
 }

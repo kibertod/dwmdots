@@ -27,7 +27,7 @@ return {
 			black = "#0D0C0C",
 		}
 
-		vim.api.nvim_set_hl(0, "Normal", { bg = "#0f0f0f" })
+		vim.api.nvim_set_hl(0, "Normal", { bg = bg })
 
 		-- split
 		vim.api.nvim_set_hl(0, "WinSeparator", { bg = colors.bg_selected, fg = colors.bg_selected })
@@ -51,43 +51,43 @@ return {
 
 		-- Customization for Pmenu
 		vim.api.nvim_set_hl(0, "PmenuSel", { bg = colors.fg, fg = colors.bg })
-		vim.api.nvim_set_hl(0, "Pmenu", { fg = colors.fg, bg = colors.bg })
+		vim.api.nvim_set_hl(0, "Pmenu", { fg = colors.fg, bg = colors.bg_selected })
 
-		vim.api.nvim_set_hl(0, "CmpItemAbbrDeprecated", { fg = colors.fg, bg = "NONE", strikethrough = true })
-		vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = colors.blue, bg = "NONE", bold = true })
-		vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { fg = colors.blue, bg = "NONE", bold = true })
-		vim.api.nvim_set_hl(0, "CmpItemMenu", { fg = colors.fg, bg = "NONE", italic = true })
+		vim.api.nvim_set_hl(0, "CmpItemAbbrDeprecatedIcon", { fg = colors.fg, bg = "NONE", strikethrough = true })
+		vim.api.nvim_set_hl(0, "CmpItemAbbrMatchIconIcon", { fg = colors.blue, bg = "NONE", bold = true })
+		vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzyIcon", { fg = colors.blue, bg = "NONE", bold = true })
+		vim.api.nvim_set_hl(0, "CmpItemMenuIcon", { fg = colors.fg, bg = "NONE", italic = true })
 
-		vim.api.nvim_set_hl(0, "CmpItemKindField", { bg = colors.bg, fg = colors.gray })
-		vim.api.nvim_set_hl(0, "CmpItemKindProperty", { bg = colors.bg, fg = colors.gray })
-		vim.api.nvim_set_hl(0, "CmpItemKindEvent", { bg = colors.bg, fg = colors.gray })
+		vim.api.nvim_set_hl(0, "CmpItemKindFieldIcon", { bg = colors.gray, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindPropertyIcon", { bg = colors.gray, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindEventIcon", { bg = colors.gray, fg = colors.bg })
 
-		vim.api.nvim_set_hl(0, "CmpItemKindText", { bg = colors.bg, fg = colors.blue })
-		vim.api.nvim_set_hl(0, "CmpItemKindKeyword", { bg = colors.bg, fg = colors.blue })
-		vim.api.nvim_set_hl(0, "CmpItemKindValue", { bg = colors.bg, fg = colors.blue })
-		vim.api.nvim_set_hl(0, "CmpItemKindEnumMember", { bg = colors.bg, fg = colors.blue })
-		vim.api.nvim_set_hl(0, "CmpItemKindTypeParameter", { bg = colors.bg, fg = colors.blue })
-		vim.api.nvim_set_hl(0, "CmpItemKindColor", { bg = colors.bg, fg = colors.blue })
+		vim.api.nvim_set_hl(0, "CmpItemKindTextIcon", { bg = colors.blue, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindKeywordIcon", { bg = colors.blue, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindValueIcon", { bg = colors.blue, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindEnumMemberIcon", { bg = colors.blue, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindTypeParameterIcon", { bg = colors.blue, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindColorIcon", { bg = colors.blue, fg = colors.bg })
 
-		vim.api.nvim_set_hl(0, "CmpItemKindConstant", { bg = colors.bg, fg = colors.purple })
-		vim.api.nvim_set_hl(0, "CmpItemKindConstructor", { bg = colors.bg, fg = colors.purple })
-		vim.api.nvim_set_hl(0, "CmpItemKindReference", { bg = colors.bg, fg = colors.purple })
+		vim.api.nvim_set_hl(0, "CmpItemKindConstantIcon", { bg = colors.purple, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindConstructorIcon", { bg = colors.purple, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindReferenceIcon", { bg = colors.purple, fg = colors.bg })
 
-		vim.api.nvim_set_hl(0, "CmpItemKindStruct", { bg = colors.bg, fg = colors.orange })
-		vim.api.nvim_set_hl(0, "CmpItemKindClass", { bg = colors.bg, fg = colors.orange })
-		vim.api.nvim_set_hl(0, "CmpItemKindEnum", { bg = colors.bg, fg = colors.orange })
-		vim.api.nvim_set_hl(0, "CmpItemKindInterface", { bg = colors.bg, fg = colors.orange })
+		vim.api.nvim_set_hl(0, "CmpItemKindStructIcon", { bg = colors.orange, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindClassIcon", { bg = colors.orange, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindEnumIcon", { bg = colors.orange, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindInterfaceIcon", { bg = colors.orange, fg = colors.bg })
 
-		vim.api.nvim_set_hl(0, "CmpItemKindFunction", { bg = colors.bg, fg = colors.red })
-		vim.api.nvim_set_hl(0, "CmpItemKindOperator", { bg = colors.bg, fg = colors.red })
-		vim.api.nvim_set_hl(0, "CmpItemKindMethod", { bg = colors.bg, fg = colors.red })
+		vim.api.nvim_set_hl(0, "CmpItemKindFunctionIcon", { bg = colors.red, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindOperatorIcon", { bg = colors.red, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindMethodIcon", { bg = colors.red, fg = colors.bg })
 
-		vim.api.nvim_set_hl(0, "CmpItemKindModule", { bg = colors.bg, fg = colors.green })
-		vim.api.nvim_set_hl(0, "CmpItemKindVariable", { bg = colors.bg, fg = colors.green })
-		vim.api.nvim_set_hl(0, "CmpItemKindFile", { bg = colors.bg, fg = colors.green })
+		vim.api.nvim_set_hl(0, "CmpItemKindModuleIcon", { bg = colors.green, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindVariableIcon", { bg = colors.green, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindFileIcon", { bg = colors.green, fg = colors.bg })
 
-		vim.api.nvim_set_hl(0, "CmpItemKindUnit", { bg = colors.bg, fg = colors.yellow })
-		vim.api.nvim_set_hl(0, "CmpItemKindSnippet", { bg = colors.bg, fg = colors.yellow })
-		vim.api.nvim_set_hl(0, "CmpItemKindFolder", { bg = colors.bg, fg = colors.yellow })
+		vim.api.nvim_set_hl(0, "CmpItemKindUnitIcon", { bg = colors.yellow, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindSnippetIcon", { bg = colors.yellow, fg = colors.bg })
+		vim.api.nvim_set_hl(0, "CmpItemKindFolderIcon", { bg = colors.yellow, fg = colors.bg })
 	end,
 }

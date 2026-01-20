@@ -104,24 +104,6 @@ return {
 		end,
 	},
 	{
-		"kndndrj/nvim-dbee",
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-		},
-		build = function()
-			-- Install tries to automatically detect the install method.
-			-- if it fails, try calling it with one of these parameters:
-			--    "curl", "wget", "bitsadmin", "go"
-			require("dbee").install()
-		end,
-		config = function()
-			require("dbee").setup(--[[optional config]])
-		end,
-		init = function()
-			vim.keymap.set("n", "<leader>DB", "<cmd>Dbee<CR>")
-		end,
-	},
-	{
 		"lewis6991/gitsigns.nvim",
 		init = function()
 			require("gitsigns").setup()
@@ -162,6 +144,7 @@ return {
 		},
 		init = function()
 			require("aerial").setup({
+                backends = {"treesitter"},
 				on_attach = function(bufnr)
 					vim.keymap.set("n", "K", "<cmd>AerialPrev<CR>", { buffer = bufnr })
 					vim.keymap.set("n", "J", "<cmd>AerialNext<CR>", { buffer = bufnr })
